@@ -1,19 +1,26 @@
 package conta;
 
 import java.util.Scanner;
-
+import conta.model.Conta;
 import conta.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		
-		Scanner leia = new Scanner(System.in);
+		//Instaciamento | Classe -> Objeto Ultilizavel
+		Conta c1 = new Conta(12345, 0001, 1, "Maria dos Anjos",10000f);
+		c1.visualizar();
+		c1.sacar(12000.0f);
+		c1.visualizar();
+		c1.depositar(500.0f);
+		c1.visualizar();
 		
+		Scanner leia = new Scanner(System.in);
 		int opcao;
 		
 		
-		while(true) {
+		while (true) {
 			
 			System.out.println(Cores.TEXT_GREEN_BRIGHT + Cores.ANSI_BLACK_BACKGROUND);
 			
